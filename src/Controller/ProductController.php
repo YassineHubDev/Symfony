@@ -38,4 +38,17 @@ class ProductController extends AbstractController
         dump($requestHTTP->request);
         return $this->render('product/create.html.twig');
     }
+
+    public function index(): Response
+    {
+        //Récupération du repository des produits
+        $repository = $this->getDoctrine()
+            ->getRepository(Product::class);
+        //Récupération de tous les produits
+        $products = $repository->findAll();
+        //Renvoie des produits à la vue
+        return $this->render('product/index.html.twig', [
+            'products' => $products
+        ]);
+    }
 }

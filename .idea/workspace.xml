@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b2ddb5c-f9c3-4bca-b000-076df9f66531" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/product/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Produit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ProduitRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,13 +92,37 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3">
-              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="411">
+              <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
               <folding>
                 <element signature="e#30#78#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/ProductController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="632">
+              <caret line="49" column="41" lean-forward="true" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+              <folding>
+                <element signature="e#35#100#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/product/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,11 +160,12 @@
         <option value="$PROJECT_DIR$/templates/product/show.html.twig" />
         <option value="$PROJECT_DIR$/config/routes.yaml" />
         <option value="$PROJECT_DIR$/templates/product/create.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/ProductController.php" />
         <option value="$PROJECT_DIR$/src/Controller/APIController.php" />
         <option value="$PROJECT_DIR$/.env.local" />
         <option value="$PROJECT_DIR$/src/Migrations/Version20190626120120.php" />
         <option value="$PROJECT_DIR$/src/Entity/Product.php" />
+        <option value="$PROJECT_DIR$/src/Controller/ProductController.php" />
+        <option value="$PROJECT_DIR$/templates/product/index.html.twig" />
       </list>
     </option>
   </component>
@@ -305,6 +327,12 @@
               <item name="sf4-symfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="sf4-symfony" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sf4-symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf4-symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -318,6 +346,17 @@
               <item name="sf4-symfony" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sf4-symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf4-symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sf4-symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sf4-symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -367,17 +406,17 @@
       <workItem from="1561446784173" duration="15986000" />
       <workItem from="1561473072057" duration="667000" />
       <workItem from="1561532997877" duration="8904000" />
-      <workItem from="1561555095271" duration="2819000" />
+      <workItem from="1561555095271" duration="3550000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37931000" />
+    <option name="totallyTimeSpent" value="38662000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="7" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2564725" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2564725" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -390,7 +429,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.9653979" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.9653979" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3298731" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -569,16 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-          <folding>
-            <element signature="e#35#100#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/http-foundation/RedirectResponse.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -711,10 +740,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="411">
+          <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
           <folding>
             <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="49" column="41" lean-forward="true" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+          <folding>
+            <element signature="e#35#100#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/product/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
