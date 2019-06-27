@@ -2,9 +2,11 @@
 
 namespace App\Entity;
 
+use Cocur\Slugify\Slugify;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Query\AST\UpdateClause;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
@@ -44,7 +46,7 @@ class Product
     private $dateCreation;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $dateModification;
 
@@ -77,7 +79,26 @@ class Product
     public function __construct()
     {
         $this->tags = new ArrayCollection();
-        $this->category = new ArrayCollection();
+
+        $this->nbViews = 0;
+        $this->dateCreation = new \DateTime();
+    }
+
+    /**
+     * Met à jour le slug par rapport au name
+     * @return Product
+     */
+    public function updateSlug(): self
+    {
+        //On récupère le slugger
+        $slugify = new Slugify();
+        //On utilise le slugger...
+        //...sur la name
+        //...pour mettre à jour le slug
+        $this->slug = $slugify->slugify($this->name);
+
+        //Pour le chainage
+        return $this;
     }
 
     public function getId(): ?int
@@ -93,6 +114,7 @@ class Product
     public function setName(string $name): self
     {
         $this->name = $name;
+        $this->updateSlug ();
 
         return $this;
     }
@@ -208,30 +230,21 @@ class Product
     }
 
     /**
-     * @return Collection|Category[]
+     * @return mixed
      */
-    public function getCategory(): Collection
+    public function getCategory()
     {
         return $this->category;
     }
 
-    public function addCategory(Category $category): self
+    /**
+     * @param mixed $category
+     */
+    public function setCategory($category): void
     {
-        if (!$this->category->contains($category)) {
-            $this->category[] = $category;
-        }
-
-        return $this;
+        $this->category = $category;
     }
 
-    public function removeCategory(Category $category): self
-    {
-        if ($this->category->contains($category)) {
-            $this->category->removeElement($category);
-        }
-
-        return $this;
-    }
 
     public function getSlug(): ?string
     {
