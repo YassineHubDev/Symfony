@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Category;
 use App\Entity\Product;
+use App\Form\ProductType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,31 +20,38 @@ class ProductController extends AbstractController
      */
     public function create(Request $requestHTTP): Response
     {
-        //Récupération d'une catégorie
+        //Récupération du formulaire
+        $product = new Product();
+        $formProduct = $this->createForm(ProductType::class, $product);
+
+        /*
+         * Récupération d'une catégorie
         $category = $this->getDoctrine()
             ->getRepository(Category::class)
             ->find(1)
             ;
-
         //Création et remplissage du produit
         $product = new Product();
         $product
-            ->setName('ventilateur')
+            ->setName('ventila')
             ->setDescription('Pour faire du froid')
             ->setImageName('ventilo.jpg')
             ->setEtatPublication(true)
             ->setPrice(15.99)
             ->setCategory($category)
             ;
-
         dump($product);
+        */
 
-        //On sauvegarde le produit en BDD grâce au manager
+        /* On sauvegarde le produit en BDD grâce au manager
         $manager = $this->getDoctrine()->getManager();
         $manager->persist($product);
         $manager->flush();
+        */
 
-        return $this->render('product/create.html.twig');
+        return $this->render('product/create.html.twig', [
+            'formProduct' => $formProduct->createView()
+        ]);
     }
 
     /**
